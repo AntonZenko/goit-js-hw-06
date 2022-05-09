@@ -32,7 +32,6 @@ const makeLog = (obj) => {
 };
 
 createObject(categoryList, elementsList);
-// console.log(categories);
 makeLog(categories);
 
 

@@ -21,3 +21,4 @@ const createItems = array => {
 const items = createItems(ingredients);
 
 newlistItems.append(...items);
+console.log(items);

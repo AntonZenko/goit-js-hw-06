@@ -33,4 +33,3 @@ const makeLog = (obj) => {
 
 createObject(categoryList, elementsList);
 makeLog(categories);
-console.log(makeLog);

@@ -2,7 +2,7 @@ const inputRef = document.querySelector("#validation-input");
 
 function handleBlur(event) {
   const validInput = Number(event.currentTarget.dataset.length);
-  console.log(event.currentTarget);  
+  // console.log(event.currentTarget);  
   const userInput = event.currentTarget.value.length;
 
   if (validInput === userInput) {

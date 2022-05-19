@@ -7,7 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-const newlistItems = document.querySelector('#ingredients');
+const newListItems = document.querySelector('#ingredients');
 
 const createItems = array => {
   return array.map(option => {
@@ -20,4 +20,4 @@ const createItems = array => {
 
 const items = createItems(ingredients);
 
-newlistItems.append(...items);
+newListItems.append(...items);

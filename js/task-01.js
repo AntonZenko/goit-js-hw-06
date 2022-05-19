@@ -1,35 +1,52 @@
-const categoryQuantity = document.querySelector('#categories');
-const categoryList = document.querySelectorAll('h2');
-const elementsList = document.querySelectorAll('.item ul');
+const categoriesRef = document.querySelector("#categories");
+const categiriesItemRef = [...categoriesRef.children]; //
+console.log(`Number of categories: ${categiriesItemRef.length}`);
 
-let categories = {};
+categiriesItemRef.forEach((item) => {
+  const categoryTitleRef = item.querySelector("h2");
+  const categoryElementsRef = item.querySelectorAll("li");
+  console.log(`Category: ${categoryTitleRef.textContent}`);
+  console.log(`Elements: ${categoryElementsRef.length}`);
+});
 
-const createObject = (category, elements) => {
-  const categoryName = [];
-  const elementsQuantity = [];
+// -------------- Вариант с созданием массива объектов --------------------
 
-  for (const key of category) {
-    categoryName.push(key.textContent);
-  }
 
-  for (const key of elements) {
-    elementsQuantity.push(key.children.length);
-  }
+// const categoryQuantity = document.querySelector('#categories');
+// const categoryList = document.querySelectorAll('h2');
+// const elementsList = document.querySelectorAll('.item ul');
 
-  const objB = categoryName.map((item, index) => {
-    return { 'name': item, 'items': elementsQuantity[index] }
-  });
+// // let categories = {};
 
-  return categories = objB;
-};  
+// const createObject = (category, elements) => {
+//   const categoryName = [];
+//   const elementsQuantity = [];
 
-const makeLog = (obj) => {
-  console.log('Number of categories:', categoryQuantity.children.length);
-  for (const key of obj) {
-    console.log('Category:', key.name);
-    console.log('Elements:', key.items);
-  }
-};
+//   for (const key of category) {
+//     categoryName.push(key.textContent);
+//   }
 
-createObject(categoryList, elementsList);
-makeLog(categories);
+//   for (const key of elements) {
+//     elementsQuantity.push(key.children.length);
+//   }
+
+//   const objB = categoryName.map((item, index) => {
+//     return { 'name': item, 'items': elementsQuantity[index] }
+//   });
+
+//   return categories = objB;
+// };  
+
+// const makeLog = (obj) => {
+//   console.log('Number of categories:', categoryQuantity.children.length);
+//   for (const key of obj) {
+//     console.log('Category:', key.name);
+//     console.log('Elements:', key.items);
+//   }
+// };
+
+// const categories = createObject(categoryList, elementsList);
+
+// makeLog(categories);
+
+

@@ -15,8 +15,9 @@ const images = [
 
 function createGalleryMarkup() {
   const cardListRef = document.querySelector('.gallery');
+  const imgMarkup = images.map(image => `<li><img class = "imgItem" src = ${image.url} alt = "${image.alt}" width=300 /></li>`).join('');
 
-  cardListRef.insertAdjacentHTML('afterbegin', images.map(image => `<li><img class = "imgItem" src = ${image.url} alt = "${image.alt}" width=300 /></li>`).join(''));
+  cardListRef.insertAdjacentHTML('afterbegin', imgMarkup);
   
   cardListRef.style.listStyle = "none";
   cardListRef.style.display = "flex";

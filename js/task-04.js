@@ -9,15 +9,15 @@ let counterValue = 0;
 
 function onDecrementButton() {
   counterValue -= 1;
-  showValue();
+  changeValue();
 }
 
 function onIncrementButton() {
   counterValue += 1;
-  showValue();
+  changeValue();
 }
 
-function showValue() {
+function changeValue() {
   refs.value.textContent = counterValue;
 }
 
